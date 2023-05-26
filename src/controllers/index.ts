@@ -52,7 +52,8 @@ router.post('/', async (req, res) => {
 				req.body['strategy'],
 				orderResult,
 				req.body['price'],
-				req.body['market']
+				req.body['market'],
+				req.body['trailingPercent']
 			);
 			break;
 		}
@@ -64,7 +65,8 @@ router.post('/', async (req, res) => {
 			await dydxExportOrder(
 				req.body['strategy'],
 				orderResult.order,
-				req.body['price']
+				req.body['price'],
+				req.body['trailingPercent']
 			);
 		}
 	}
