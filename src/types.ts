@@ -14,6 +14,7 @@ export type AlertObject = {
 	sizeUsd?: number;
 	order: string;
 	price: number;
+	trailingPercent: number;
 	position: string;
 	reverse: boolean;
 	passphrase?: string;
@@ -25,6 +26,7 @@ export type dydxOrderParams = {
 	type: OrderType.MARKET;
 	timeInForce: TimeInForce.FOK;
 	postOnly: false;
+	trailingPercent: number;
 	size: string;
 	price: string;
 	limitFee: string;
